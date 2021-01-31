@@ -1,34 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Introdução ao HTML</title>
+    <title>Cadastro de Usuário</title>
 </head>
 
 <body>
     <header>
-        <h2>Página Inicial</h2>
+        <div>
+            <a href="home.html">Página Inicial</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="estados.html">Estados</a>
+            <a href="cidades.html">Cidades</a>
+            <a href="produtos.html">Produtos</a>           
+            <a href="relatorio.html">Relatório</a>
+            <a href="#">Cadastrar Usuário</a>
+            <a href="cadastrarproduto.html">Cadastrar Produto</a>
+            <a href="home.html">Sair</a>
+        </div>
+
+        <h2>Cadastrar Usuário</h2>
     </header>
 
     <div>
-        <h2>Curso se programação WEB</h2>
-        <h3>Início do curso em HTML</h3>
-        <h4></h4>
+        <form method="post" action="validar.html">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="nome"/>
+            <br/>
 
-        <!--comentários-->
-        <p>Curso de introdução a programação web</p>
-    </div>
+            <label for="endereco">Endereço</label>
+            <input type="text" name="endereco" id="endereco">
+            <br/>
 
-    <div>
-        <a href="home.html">Página Inicial</a>
-        <a href="pessoas.html">Pessoas</a>
-        <a href="estados.html">Estados</a>
-        <a href="cidades.html">Cidades</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="perfil.html">Perfil</a>
-        <a href="cadastro.html">Cadastrar</a>
-        <a href="home.html">Sair</a>
-        <img src="" alt=""/>
+            <label for="data">Nascimento</label>
+            <input type="date" name="data" id="data"/>
+            <br/>
+
+            <label>Gênero</label>
+            <select>
+                <option disabled selected>Selecione</option>
+                <option>Feminino</option>
+                <option>Masculino</option>
+                <option>Outro</option>
+            </select>
+            <br/>
+
+            <label for="email">e-mail</label>
+            <input type="email" name="email" id="email" placeholder="e-mail"/>
+            <br/>
+
+            <label>Qual aplicação você prefere desenvolver?</label>
+            <br/>
+
+            <input type="radio" name="area" id="frontend"/>
+            <label for="frontend">Front-end</label>
+            <br/>
+
+            <input type="radio" name="area" id="backend"/>
+            <label for="backend">Back-end</label>
+            <br/>
+
+            <input type="radio" name="area" id="fulls"/>
+            <label for="fulls">Fullstack</label>
+            <br/><br/>
+
+            <input type="submit" value="cadastrar">
+            <input type="reset" value="limpar">      
+        </form>
     </div>
 
 </body>

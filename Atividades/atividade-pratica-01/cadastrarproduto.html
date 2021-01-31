@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="home.html">Página Inicial</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="estados.html">Estados</a>
+            <a href="cidades.html">Cidades</a>
+            <a href="produtos.html">Produtos</a>           
+            <a href="relatorio.html">Relatório</a>
+            <a href="cadastro.html">Cadastrar Usuário</a>
+            <a href="#">Cadastrar Produto</a>
+            <a href="home.html">Sair</a>
+        </div>
+
+        <h2>Dados do cadastro</h2>
+
+        <div>
+            <form method="post" action="validar.html">
+                <label for="imagem">Imagem</label>
+                <input type="file" name="imagem" id="imagem" />
+                <br/>
+    
+                <label for="nome">Nome do produto</label>
+                <input type="text" name="nome" id="nome">
+                <br/>
+    
+                <label for="quantidade">Quantidade</label>
+                <input type="number" name="quantidade" id="quantidade"/>
+                <br/>
+    
+                <label for="especificacao">Especificação</label>
+                <br/>
+                <textarea name="especificacao" id="especificacao"></textarea>
+                <br/>
+    
+                <label for="conteudo">Conteúdo da Embalagem</label>
+                <textarea name="conteudo" id="conteudo"></textarea>
+                <br/>
+    
+                <label>Preço</label>
+                <input type="number" min="0.00" step="0.01"/>
+                <br/> 
+                <br/> 
+                
+                <input type="submit" value="salvar"/>
+            </form>
+        </div>
+
+    </header>
+
+</body>
+</html>
