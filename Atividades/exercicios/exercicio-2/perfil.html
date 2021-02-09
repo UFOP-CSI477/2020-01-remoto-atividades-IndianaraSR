@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/perfil.css">
+    <title>Perfil</title>
+</head>
+
+<body>
+    <header>
+            <a href="home.html">Página Inicial</a>
+            <a class="atual" href="#">Perfil</a>           
+            <a href="produtos.html">Produtos</a>           
+            <a href="relatorio.html">Relatório</a>
+            <a href="cadastrarUsuario.html">Cadastrar Usuário</a>
+            <a href="cadastrarproduto.html">Cadastrar Produto</a>
+            <a href="home.html">Sair</a>   
+    </header>
+
+    <main>
+        <div class="cartao">
+            <div>
+                <img width="80px" src="./img/visualsofdana-t8otYBKW_lA-unsplash.jpg" alt=""/>
+                <br>
+
+                <button>Alterar Imagem</button>
+                <br/>
+                <br/>
+            </div>
+
+            <div>
+                <h3>Indianara</h3>
+                <hr/>
+                <p><span>"</span>Para conhecermos os amigos é necessário passar pelo sucesso e pela desgraça. No sucesso, verificamos a quantidade e, na desgraça, a qualidade.</p>
+            </div>
+            
+        </div>
+
+        <form method="post" action="validar.html">
+            <div>
+                <label>Nome Completo: </label>
+                <input value="Indianara Santos Rodrigues" type="text"/>
+            </div>
+
+            <div>
+                <label>e-mail:</label>
+                <input value="indianara.rodrigues@aluno.ufop.edu.br" type="text"/>
+            </div>
+
+            <div>
+                <label>Matrícula: </label>
+                <input value="1728246" type="number"/>
+            </div>
+            
+            <input type="submit" value="Editar Perfil"/>
+        </form>
+    </main>
+</body>
+</html>

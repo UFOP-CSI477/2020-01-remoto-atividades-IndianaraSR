@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global.css">
+    <title>Cadastro de Usuário</title>
+</head>
+
+<body>
+    <header>
+            <a href="home.html">Página Inicial</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="produtos.html">Produtos</a>           
+            <a href="relatorio.html">Relatório</a>
+            <a class="atual" href="#">Cadastrar Usuário</a>
+            <a href="cadastrarproduto.html">Cadastrar Produto</a>
+            <a href="home.html">Sair</a>
+    </header>
+
+    <main>       
+        <form method="post" action="validar.html">
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="nome"/>
+            </div>
+
+            <div>
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" id="endereco">
+            </div>
+
+            <div>
+                <label for="data">Nascimento</label>
+                <input type="date" name="data" id="data"/>
+            </div>
+
+            <div>
+                <label>Gênero</label>
+                <select>
+                    <option disabled selected>Selecione</option>
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="email">e-mail</label>
+                <input type="email" name="email" id="email" placeholder="e-mail"/>
+            </div>
+
+            <label>Que tipo de aplicação você prefere desenvolver?</label>
+            
+            <div>
+                <input type="radio" name="area" id="frontend"/>
+                <label for="frontend">Front-end</label>
+            </div>
+
+            <div>
+                <input type="radio" name="area" id="backend"/>
+                <label for="backend">Back-end</label>
+            </div>
+
+            <div>
+                <input type="radio" name="area" id="fulls"/>
+                <label for="fulls">Fullstack</label>
+            </div>
+
+            <div>
+                <input type="submit" value="cadastrar">
+                <input type="reset" value="limpar"> 
+            </div>    
+        </form>
+    </main>
+
+</body>
+</html>
