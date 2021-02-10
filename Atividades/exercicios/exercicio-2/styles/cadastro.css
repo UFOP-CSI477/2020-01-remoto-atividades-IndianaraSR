@@ -1,0 +1,16 @@
+object{
+    height: 50px;
+    width: 50px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+section{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}

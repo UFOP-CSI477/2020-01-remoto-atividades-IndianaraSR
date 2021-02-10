@@ -1,0 +1,21 @@
+header nav{
+    height: 80px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    padding: 0px;
+}
+
+header a{
+    opacity: 1;
+}
+header a.atual{
+    color: #003459;
+}
+
+main h1{
+    text-align: center;
+}
+
