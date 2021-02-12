@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -12,7 +17,7 @@ header nav{
     display: flex;
     font-size: 18px;
     gap: 24px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Spectral', Arial, Helvetica, sans-serif;
     font-weight:300;
     padding: 0px 16px;
     align-items: center;
@@ -89,7 +94,7 @@ form{
 }
 
 input[type="text"], input[type="number"], input[type="email"], input[type="date"], select, textarea{
-    background: none;
+    background: white;
     width: 300px;
     padding: 4px 16px;
     border-radius: 4px;
@@ -103,5 +108,71 @@ textarea{
 div label{
     display: inline-block;
     min-width: 150px;
-    text-align: right;
+    /* text-align: right; */
+}
+
+label.widthauto{
+    min-width: auto;
+}
+
+table{
+    width: 100%;
+    border: 2px solid #EEEEEE;    
+}
+
+td{
+    border: none;
+    text-align: center;
+}
+
+thead{
+    background: rgb(27, 27, 27);
+    color: #f0f0f0;
+    text-transform: uppercase;    
+}
+
+thead tr th{
+    min-width: 200px;
+    height: 60px;
+}
+
+tbody tr{
+    background: white;   
+}
+
+tbody tr:hover{
+    background: #ff5404 !important;
+}
+
+tbody tr:nth-child(odd){
+    background: #EEEEEE;
+}
+
+tbody tr td:hover{
+    background: #fd6721 ;
+}
+
+tbody tr td{
+    height: 100px;
+}
+
+tfoot tr td{
+    background: rgb(27, 27, 27);
+    color: #f0f0f0;
+    height: 32px;
+    text-align: center;
+}
+
+a.voltar{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(48, 48, 48);
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: 250ms;
+}
+
+a.voltar:hover{
+    background: rgb(0, 102, 255);
 }
