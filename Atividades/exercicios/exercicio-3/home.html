@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Introdução ao HTML</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Paginal Inicial</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="perfil.html">Perfil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="produtos.html">Produtos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="relatorio.html">Relatório</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cadastroDeUsuario.html">Cadastrar Usuário</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cadastrarProduto.html">Cadastrar Produto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="home.html">Sair</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+                <a class="navbar-brand"></a>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="procurar" placeholder="Procurar">
+                  <button class="btn btn-outline-success" type="submit">Procurar</button>
+                </form>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="d-flex justify-content-center flex-column">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img style="height: 500px; object-fit:cover;" src="./img/carousel/img1.jpg" class="d-block w-100" alt="teclado">
+                </div>
+
+                <div class="carousel-item">
+                    <img style="height: 500px; object-fit:cover;" src="./img/carousel/img2.jpg" class="d-block w-100" alt="setup">
+                </div>
+
+                <div class="carousel-item">
+                    <img style="height: 500px; object-fit:cover;" src="./img/carousel/img3.jpg" class="d-block w-100" alt="codigo">
+                </div>
+
+                <div class="carousel-item">
+                    <img style="height: 500px; object-fit:cover;" src="./img/carousel/img4.jpg" class="d-block w-100" alt="notebook">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel"  data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel"  data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+          </div>  
+          
+            <figure class="text-end m-3">
+                <blockquote class="blockquote">
+                  <p>“Uma máquina consegue fazer o trabalho de 50 homens ordinários. 
+                    Nenhuma máquina consegue fazer o trabalho de um homem extraordinário”.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Elbert Hubbard – <cite title="Source Title">escritor</cite>
+                </figcaption>
+              </figure>
+              <p> </p>
+
+
+    </main>
+    
+</body>
+</html>

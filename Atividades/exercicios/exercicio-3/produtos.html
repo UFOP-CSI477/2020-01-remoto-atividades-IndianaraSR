@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Cadastro de Produtos</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="home.html">Paginal Inicial</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="perfil.html">Perfil</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Produtos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="relatorio.html">Relatório</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastroDeUsuario.html">Cadastrar Usuário</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastrarProduto.html">Cadastrar Produto</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Sair</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+                <a class="navbar-brand"></a>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    
+    </header>
+
+    <main class="d-flex justify-content-center p-5">
+    <div  class="w-75 row">
+        <div>
+            <label class="mb-2 fw-bold fs-2">PRODUTOS CADASTRADOS</label>
+
+            <table class="table table-striped"> 
+                <thead class="table-dark">
+                    <tr>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Imagem</th>
+                        <th class="text-center" style="width: 20%;">Nome</th>
+                        <th class="text-center">Qtd. Disponível</th>
+                        <th class="text-center">Especificação</th>
+                        <th class="text-center" style="width: 20%;">Conteúdo da Embalagem</th>
+                        <th class="text-center">Preço</th>                    
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="text-center align-middle">1</td>
+                        <td class="align-middle"><img width="100px"src="./img/produtos/mouse.jpg"/></td>
+
+                        <td class="align-middle">
+                            <a class="text-decoration-none" target="blank" href="https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=49461&gclid=Cj0KCQiAx9mABhD0ARIsAEfpavR70BDbaYvsumBJJ3tILQVjQom9ib5ZCKoUYZ4YTzL3UaWc1TgvdPMaAu_0EALw_wcB">
+                                Mouse Logitech M90 Preto 1000DPI
+                            </a>
+                        </td>
+
+                        <td class="text-center align-middle">7</td>
+                        <td class="align-middle">
+                            <ul>
+                                <li>Cor: Preto</li>
+                                <li>Interface: USB</li>
+                                <li>Plug and Play</li> 
+                                <li>Rolagem Fácil</li>
+                                <li>DPI: 1000</li>
+                            </ul>
+                        </td>
+                        <td class="align-middle">
+                            <ul>
+                                <li>01 Mouse</li>
+                                <li>Manual do Usuário</li>                      
+                            </ul>
+                        </td>
+                        <td class="text-center align-middle">R$ 27,90</td>                   
+                    </tr>
+
+                    <tr>
+                        <td class="text-center align-middle">2</td>
+                        <td class="align-middle"><img width="100px" src="./img/produtos/headset.jpg"/></td>
+
+                        <td class="align-middle">
+                            <a class="text-decoration-none" target="blank" href="https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=100273">
+                                Headset Gamer Logitech G332
+                            </a>
+                        </td>
+
+                        <td class="text-center align-middle">2</td>
+                        <td class="align-middle">
+                            <ul>
+                                <strong>Fones de Ouvido:</strong>
+                                <li>Driver: 50 mm</li>
+                                <li>Resposta de frequência: 20 Hz - 20 kHz</li>
+                                <strong>Microfone:</strong>
+                                <li>Tamanho: 6 mm</li>
+                                <li>Resposta de frequência: 100 Hz-10 kHz</li>
+                            </ul>
+                        </td>
+                        <td class="align-middle">
+                            <ul>
+                                <li>Headset com fio para jogos</li> 
+                                <li>Adaptador Y com entradas individuais para microfone e fone de ouvido</li>
+                                <li>Documentação do usuário </li>
+                            </ul>
+                        </td>
+                        <td class="text-center align-middle">R$ 449,29</td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-center align-middle">3</td>
+                        <td class="align-middle"><img width="100px" src="./img/produtos/teclado.jpg"/></td>
+                        <td class="align-middle">
+                            <a class="text-decoration-none" target="blank" href="https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=105009">
+                                Teclado Mecânico Gamer HyperX Alloy Origins Core, RGB]
+                            </a>
+                        </td>
+                        <td class="text-center align-middle">10</td>
+                        <td class="align-middle">
+                            <ul>
+                                <li>Acionamento: HyperX Switch</li>
+                                <li>Tipo: Mecânico</li>
+                                <li>Layout: ABNT2</li>
+                            </ul>
+                        </td>
+                        <td class="align-middle">
+                            <ul>
+                                <li>Teclado Mecânico Gamer HyperX Alloy Origins Core</li>
+                            </ul>
+                        </td>
+                        <td class="text-center align-middle">R$ 929,29</td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
