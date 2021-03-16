@@ -1,0 +1,80 @@
+*{
+    outline: none;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body{
+    /* position: absolute; */
+    margin: 0px;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: url(./img/corrida.jpg) no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#titulo{
+    color:rgb(20, 20, 20);
+    text-shadow: 4px 8px 16px  white;
+    font-weight: 600;
+}
+
+#formulario-competidor{     
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+}
+
+#formulario-competidor input:not([type="submit"]){
+    opacity: 0.4;
+}
+
+#formulario-competidor input:not([type="submit"]):focus{
+    opacity: 1;
+}
+
+#formulario-competidor input[type="submit"]{
+    margin-left: 16px;
+    margin-top: 0px;
+}
+
+.botao{
+    font-size: 16px;
+    background: rgba(200, 111, 64);
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-width: 200px;
+    border: none;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.botao:hover{
+    background: rgb(69, 14, 8);
+    box-shadow: 0 2px 8px rgb(136, 136, 136);
+    color: white;
+    transform: scale(1.1);    
+}
+
+.botao:active{
+    transform: scale(0.9);
+}
+
+table{
+    max-width: 60%;
+    font-size: 16px;
+    text-align: center;
+}

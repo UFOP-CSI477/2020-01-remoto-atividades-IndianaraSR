@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Corrida de carrinho de rolimã</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+        
+        <script>
+            var competidores = [];
+        </script>
+    </head>
+
+    <body>
+        <table class="table table-dark table-striped" id="tabela-corrida">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+
+        <h4 id="titulo">Insira os Competidores</h4>
+
+        <form id="formulario-competidor">     
+            <input type="number" id="largada" placeholder="Largada" min="0"/>
+            <input id="nome" placeholder="Nome do competidor"/>
+            <input type="number" id="tempo" placeholder="Tempo"/>
+
+            <input class="botao" type="submit" value="Inserir" />
+        </form>
+
+        <div style="display:flex; gap:32px;">
+            <input class= botao type="button" id="botao-resultado" value="Resultado" />
+            <input class= botao type="button" id="botao-limpar" value="Limpar" />
+        </div>
+
+        <script>
+            document.getElementById("formulario-competidor").addEventListener("submit", (e) => {
+                // Prevenir que a página recarregue
+                e.preventDefault();
+
+                // 1. Verificar se há mais de 6 competidores, se sim interromper
+                if(competidores.length > 6)
+                    return;
+
+                // 2. Adicionar competidor na lista
+                competidores.push({
+                    posicao: null,
+                    largada: document.getElementById("largada").value,
+                    nome: document.getElementById("nome").value,
+                    tempo: document.getElementById("tempo").value,
+                    resultado: null
+                });
+
+                // 3. Resetar cabeçalho da tabela
+                const tabela = document.getElementById("tabela-corrida");
+                const cabeca = tabela.getElementsByTagName("thead")[0];
+                const cabecalho = ["Largada", "Competidor(a)", "Tempo (s)"];
+                
+                // 3.1. Limpar tudo que está no cabeçalho
+                Array.from(cabeca.getElementsByTagName("tr")).forEach((linha) => {
+                    linha.remove();
+                });
+
+                // 3.2 Reescrevar o cabeçalho
+                const linha = cabeca.insertRow();
+
+                cabecalho.forEach((x) => {
+                    const item = document.createElement("th");
+                    item.innerText = x;    
+                    linha.appendChild(item);
+                });
+
+                // 4. Resetar corpo da tabela
+                const corpo = tabela.getElementsByTagName("tbody")[0];
+                
+                // 4.1. Limpar tudo que está no corpo
+                Array.from(corpo.getElementsByTagName("tr")).forEach((linha) => {
+                    linha.remove();
+                });
+
+                // 4.2 Reescrever corpo com os competidores atualizados
+                competidores.forEach((competidor) => {
+                    const linha = corpo.insertRow();
+
+                    Object.keys(competidor).forEach((x) => {
+                        if(competidor[x] === null)
+                            return;
+
+                        const item = linha.insertCell();
+                        item.innerText = competidor[x];
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            document.getElementById("botao-resultado").addEventListener("click", (e) => {
+                // 1. Resetar cabeçalho da tabela
+                const tabela = document.getElementById("tabela-corrida");
+                const cabeca = tabela.getElementsByTagName("thead")[0];
+                const cabecalho = ["Posição", "Largada", "Competidor(a)", "Tempo (s)", "Resultado"];
+                
+                // 1.1. Limpar tudo que está no cabeçalho
+                Array.from(cabeca.getElementsByTagName("tr")).forEach((linha) => {
+                    linha.remove();
+                });
+
+                // 1.2 Reescrevar o cabeçalho
+                const linha = cabeca.insertRow();
+
+                cabecalho.forEach((x) => {
+                    const item = document.createElement("th");
+                    item.innerText = x;    
+                    linha.appendChild(item);
+                });
+
+                // 2. Ordenar competidores
+                competidores = competidores.sort((x, y) => {
+                    return (x.tempo - y.tempo) || (x.posicao - y.posicao)
+                });
+
+                // 3. Adicionar informações extras sobre a competição
+                const melhorTempo = competidores[0].tempo;
+
+                competidores.forEach((x, index) => {
+                    var posicao;
+                    var resultado;
+
+                    if(x.tempo === melhorTempo) {
+                        x.posicao = 1;
+                        x.resultado = "Vencedor(a)!";
+                    } else {
+                        x.posicao = index + 1;
+                        x.resultado = "-";
+                    }
+                });
+
+                // 2. Resetar corpo da tabela
+                const corpo = tabela.getElementsByTagName("tbody")[0];
+                
+                // 2.1. Limpar tudo que está no corpo
+                Array.from(corpo.getElementsByTagName("tr")).forEach((linha) => {
+                    linha.remove();
+                });
+
+                // 2.2 Reescrever corpo com os competidores atualizados
+                competidores.forEach((competidor) => {
+                    const linha = corpo.insertRow();
+
+                    Object.keys(competidor).forEach((x) => {
+                        const item = linha.insertCell();
+                        item.innerText = competidor[x];
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            document.getElementById("botao-limpar", (e) => {
+                // 1. Limpar tudo que está no cabeçalho da tabela
+                const tabela = document.getElementById("tabela-corrida");
+                const cabeca = tabela.getElementsByTagName("thead")[0];
+                
+                Array.from(cabeca.getElementsByTagName("tr")).forEach((linha) => {
+                    linha.remove();
+                });
+
+                // 2. Limpar tudo que está no corpo da tabela
+                const corpo = tabela.getElementsByTagName("tbody")[0];
+                
+                Array.from(corpo.getElementsByTagName("tr")).forEach((linha) => {
+                    linha.remove();
+                });
+
+                // 3. Limpar tudo que está nos inputs
+                document.getElementById("largada").value = "";
+                document.getElementById("nome").value = "";
+                document.getElementById("tempo").value = "";
+            });
+        </script>
+    </body>
+</html>

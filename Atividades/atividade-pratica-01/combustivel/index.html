@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Consumo de combustível</title>
+
+        <link rel="stylesheet" href="styles.css">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+        
+    </head>
+
+    <body>
+            
+        <table class="table table-striped" id="tabela-carros">
+            <thead>
+                <tr>
+                    <th>Quantidade de combustível</th>
+                    <th>Quilômetros rodados</th>
+                    <th>Desempenho (km/l)</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div style="display: flex; flex-direction: row; gap: 64px;">
+            <button class="botao" id="botao-add-carro">Adicionar carro</button>
+            <button class="botao" onclick="removerTodos()">Remover todos</button>
+            <button class="botao" id="botao-finalizar">Finalizar</button>
+        </div>
+
+        <ul class="list-group mt-5" id="lista-informacoes-finais" style="display: none; opacity: 0.6;">
+            <li class="list-group-item">Quantidade total de combustível utilizada: <span id="total-combustivel"></span></li>
+            <li class="list-group-item">Quantidade total de quilômetros rodados: <span id="total-quilometros"></span></li>
+            <li class="list-group-item">Média de consumo de combustível: <span id="media-combustivel"></span></li>
+            <li class="list-group-item">Média de quilômetros rodados: <span id="media-quilometros"></span></li>
+            <li class="list-group-item">Média de desempenho em quilômetros por litro (km/l): <span id="media-desempenho"></span></li>
+        </ul>
+
+    </body>
+
+    <script type="text/javascript" src="combustivel.js"></script>
+</html>

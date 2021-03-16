@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script language="JavaScript" src="calculator.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap" rel="stylesheet">
+
+    <script>
+        teclado();
+    </script>
+
+    <title>Calculadora Simples</title>
+</head>
+
+<body>
+    <div id="calculadora">
+
+        <div>
+            <div id="visor-container">
+                <h4>Calculadora Simples</h4>
+
+                <input id="visor" disabled>
+                    
+            </div>
+
+            <div id="teclado">              
+                <div>
+                    <button type="button" class="operador" id="mod" onclick="botao(value)">%</button>
+                    <button type="button" class="operador" id="cancelEntry">CE</button>
+                    <button type="button" class="operador" id="clear" onclick="botao(reset)">C</button>
+                    <button type="button" class="operador" onclick="botao(value)">«</button>
+                </div>
+
+                <div>
+                    <button type="button" class="operador" onclick="fracao()">1/x</button>
+                    <button type="button" class="operador" onclick="Math.pow(x,2)">x²</button>
+                    <button type="button" class="operador" id="raizQuadrada" onclick="Math.sqrt(x)">²√</button>
+                    <button type="button"class="operador" id="divisao" onclick="divisao()">&#247;</button>        
+                </div>
+
+                <div>
+                    <button type="button" class="numero" id="num7" onclick="botao(7)">7</button>
+                    <button type="button" class="numero" id="num8" onclick="botao(8)">8</button>
+                    <button type="button" class="numero" id="num9" onclick="botao(9)">9</button>
+                    <button type="button" class="operador" id="multiplicacao" onclick="multiplicacao()">*</button>                
+                </div>
+
+                <div>
+                    <button type="button" class="numero" id="num4" onclick="botao(4)">4</button>
+                    <button type="button" class="numero" id="num5" onclick="botao(5)">5</button>
+                    <button type="button" class="numero" id="num6" onclick="botao(6)">6</button>
+                    <button type="button" class="operador" id="subtracao" onclick="subtracao()">-</button>                
+                </div>
+
+                <div>
+                    <button type="button" class="numero" id="num1" onclick="botao(1)">1</button>
+                    <button type="button" class="numero" id="num2" onclick="botao(2)">2</button>
+                    <button type="button" class="numero" id="num3" onclick="botao(3)">3</button>
+                    <button type="button" class="operador" id="soma" onclick="soma()">+</button>
+                </div>
+
+                <div>
+                    <button type="button" class="numero" onclick="mudarSinal()">+/-</button>
+                    <button type="button" class="numero" id="num0" onclick="botao(0)">0</button>
+                    <button type="button" class="numero" id="virgula" onclick="virgula()">,</button>
+                    <button type="button" class="operador" id="igualdade" onclick="printResultado()">=</button>                
+                </div>          
+            </div>          
+        </div>
+    </div>  
+</body>
+</html>

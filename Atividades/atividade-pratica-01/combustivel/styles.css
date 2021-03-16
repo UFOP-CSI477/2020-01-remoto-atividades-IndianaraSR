@@ -1,0 +1,70 @@
+*{
+    font-family: 'Electrolize', sans-serif;
+    border: none;
+    outline: none;
+}
+
+body{
+    margin: 0px;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: url(./img/estrada.jpg) no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;    
+}
+button{
+    border: none;
+    outline: none;
+    transition: 0.4s;   
+}
+
+button:hover{
+    background: rgb(199, 186, 0);
+    box-shadow: 0 2px 8px rgb(136, 136, 136);
+    color: black;
+    transform: scale(1.1);  
+}
+
+.botao{
+    background: rgb(24, 24, 24);
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-width: 200px;
+    cursor: pointer;
+    margin-top: 8px;
+    color:rgb(199, 186, 0);
+    font-family: 'Electrolize', sans-serif;   
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+table{
+    max-width: 60%;
+    font-size: 16px;
+    text-align: center;
+}
+
+table tr button{
+    background: rgb(24, 24, 24);
+    color: rgb(199, 186, 0);
+    border-radius: 4px;
+    width: 120px;
+    height: 40px;
+}
+
+table tr button:not(:first-child){
+    margin-left: 8px;
+}
+
+table tr{
+    color: rgb(187, 187, 187) !important;
+}

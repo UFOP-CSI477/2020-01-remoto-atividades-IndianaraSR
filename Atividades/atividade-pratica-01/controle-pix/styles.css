@@ -1,0 +1,56 @@
+body{
+    background: rgb(247,0,114);
+    background: radial-gradient(circle, rgba(247,0,114,0) 0%, rgba(255,0,67,0) 100%);
+}
+
+table{
+    max-width: 60%;
+    font-size: 16px;
+    text-align: center;
+}
+
+button{
+    background: rgb(247, 118, 0);
+    font-size: 16px;
+    border-radius: 24px !important;
+    padding: 8px 16px;
+    min-width: 200px;
+    cursor: pointer;
+    margin-top: 8px;
+    color:white;
+    font-family: 'Electrolize', sans-serif;
+    border: none;
+    outline: none;
+}
+
+button:hover{
+    background: white;
+    box-shadow: 0 2px 8px rgb(136, 136, 136);
+    color: rgb(247, 118, 0);
+    transform: scale(1.1);  
+}
+
+button:active{
+    font-weight: 800;
+}
+
+#saldo-bancario{
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#formulario-de-transferencia{     
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 20px !important;
+    margin-bottom: 32px;
+}

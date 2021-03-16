@@ -1,0 +1,68 @@
+*{
+    font-family: 'Cairo', sans-serif;
+}
+
+body{
+    position: absolute;
+    background: url(./img/img21.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 100%;  
+    margin: 0px;
+    backdrop-filter: blur(4px);
+}
+
+#calculadora{
+    background:rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px 16px;
+    border-radius: 8px;
+
+}
+
+#teclado button{
+    margin: 2px;
+    padding: 8px;
+    min-height: 56px;
+    min-width: 80px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 200;
+    outline: none;
+}
+
+#teclado button.operador{
+    background:  rgba(0, 0, 0, 0.6);
+    font-weight: normal;
+}
+
+#teclado button:hover{
+    opacity: 0.9;
+}
+
+#visor-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+}
+
+#visor{
+    height: 64px;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    font-size: 24px;
+    text-align: right;
+    padding: 0px 12px;
+}
