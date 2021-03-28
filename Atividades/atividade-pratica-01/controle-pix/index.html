@@ -8,11 +8,10 @@
 
         <link rel="stylesheet" href="styles.css">
 
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
-        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
         <script type="text/javascript" src="funcoesPix.js"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -27,20 +26,21 @@
             </div>
 
             <div>
-                <button onclick="aumentarSaldo(50)">+ R$ 50,00</button>
-                <button onclick="aumentarSaldo(100)">+ R$ 100,00</button>
+                <button id="botao" onclick="aumentarSaldo(50)">+ R$ 50,00</button>
+                <button id="botao" onclick="aumentarSaldo(100)">+ R$ 100,00</button>
             </div>
         </div>
 
         <form id="formulario-de-transferencia">
-            <input id="valor" type="number" step=".01" placeholder="Valor (R$)" min="0"/>
-            <input id="chave-pix" placeholder="Nome, CPF/CNPJ ou Chave PIX" />
+            <input class="visor" id="valor" type="number" step=".01" placeholder="Valor (R$)" min="0"/>
+            <input class="visor" id="chave-pix" placeholder="Nome, CPF/CNPJ ou Chave PIX" />
 
-            <button>Transferir</button>
+            <button id="botao">Transferir</button>
         </form>
 
         <div style="display: flex; align-items: center; flex-direction: column;">
             <h4>Histórico de transações</h4>
+            
             <table class="table table-success table-striped" id="tabela-historico">
                 <thead>
                     <tr>
@@ -56,7 +56,7 @@
                 <tbody></tbody>
             </table>
 
-            <button onclick="limparHistorico()">Limpar histórico</button>
+            <button id="botao" onclick="limparHistorico()">Limpar histórico</button>
         </div>
 
         <script type="text/javascript" src="funcoes.js"></script>
