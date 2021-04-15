@@ -1,0 +1,24 @@
+{
+  "name": "covidcontroller",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@unform/core": "^2.1.6",
+    "@unform/web": "^2.1.6",
+    "axios": "^0.21.1",
+    "next": "10.1.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-lottie": "^1.2.3",
+    "react-notifications-component": "^3.1.0",
+    "styled-components": "^5.2.3",
+    "yup": "^0.32.9"
+  }
+}
